@@ -1,0 +1,32 @@
+openapi: '3.0.2'
+info:
+  title: InternNet Authentication API
+  version: '1.0'
+servers:
+  - url: http://localhost:3000/
+paths:
+  /auth/signup:
+    post:
+      summary: add new user.
+      responses:
+        '200':
+          description: Returns the user added to the database.
+  /auth/login:
+    post:
+      summary: allows user to log in.
+      responses:
+        '200':
+          description: Returns a jwt token for the user.
+  /user/profile:
+    get:
+      summary: gets the user profile.
+      responses:
+        '200':
+          description: Fetches and Returns the user meta data from the database.
+
+
+
+
+
+
+

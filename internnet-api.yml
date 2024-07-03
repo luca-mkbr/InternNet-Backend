@@ -1,0 +1,64 @@
+openapi: '3.0.2'
+info:
+  title: InternNet API
+  version: '1.0'
+servers:
+  - url: https://api.server.test/v1
+paths:
+
+  /events:
+    get:
+      summary: Returns all events.
+      responses:
+        '200':
+          description: Returns a list of all the events 
+    post:
+      summary: Adds a new event.
+      responses:
+        '200':
+          description: Returns the event added to the database.
+  /events/{eventId}:
+    get:
+      summary: Returns an event by ID.
+      responses:
+        '200':
+          description: Returns a list of all the events 
+    put:
+      summary: Updates an event by ID.
+      responses:
+        '200':
+          description: Returns the updated event.
+    delete:
+      summary: Deletes an event by ID.
+      responses:
+        '200':
+          description: Returns the deleted event.
+
+  /users:
+    get:
+      summary: Returns all users.
+      responses:
+        '200':
+          description: Returns a list of all the users. 
+    post:
+      summary: Adds a new user.
+      responses:
+        '200':
+          description: Returns the user added to the database.
+  /users/{userId}:
+    get:
+      summary: Returns an user by ID.
+      responses:
+        '200':
+          description: Returns a list of all the users. 
+    put:
+      summary: Updates a user by ID.
+      responses:
+        '200':
+          description: Returns the updated user.
+    delete:
+      summary: Deletes an user by ID.
+      responses:
+        '200':
+          description: Returns the deleted user.
+
